@@ -1,0 +1,124 @@
+<div class="ui container">
+    <div class="ui segment date-segment">
+        <div class="ui header centered date-div">
+            <h4>Matches</h4>
+            <h5 class="date-header"></h5>
+            <div class="ui calendar" id="calendar">
+                <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input readonly type="text" placeholder="" id="date-picker">
+                </div>
+            </div>
+            <p class="choose-date">* Click to choose a date *</p>
+        </div>
+    </div>
+
+
+    <div class="ui cards centered" id="matches-div">
+    </div>
+
+
+    <div class="ui mini modal">
+        <div class="header">Enter Your Bet</div>
+        <div class="content">
+            <div class="ui small form">
+                <div class="one fields">
+                    <div class="field">
+                        <input placeholder="Amount" name="amount" id="bet-amount" type="text">
+                    </div>
+                </div>
+                <div class="ui submit button bet-submit">Submit</div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="ui modal game-modal">
+    <div class="header">Header</div>
+    <div class="scrolling content">
+        <div class="ui dimmer inverted" id="modal-loader">
+            <div class="ui large text loader centered inline">Loading</div>
+        </div>
+        {{!-- <div class="ui two item menu">
+            <a class="active item">Editorials</a>
+            <a class="item">Reviews</a>
+            <a class="item">Upcoming Events</a>
+        </div> --}}
+        <div class="ui top attached tabular menu">
+            <a class="active item" data-tab="game-stats">Game Stats</a>
+            <a class="item" data-tab="bet-odds">Bet Odds</a>
+        </div>
+
+        <div class="ui bottom attached active tab segment stats-tab" data-tab="game-stats">
+            <div class="season-avg-header">Season Averages</div>
+
+            <div class="ui header modal-header-teams">
+                <div class="home-modal ui left floated"></div>
+                <div class="away-modal ui right floated"></div>
+            </div>
+            <div class="ui divider"></div>
+            {{!-- Charts --}}
+            <div class="chart-area">
+                {{!-- <div class="home-charts">
+                    <div class="fg-chart charts">
+                        <canvas id="home-fg"></canvas>
+                    </div>
+                    <div class="three- -chart charts">
+                        <canvas id="home-3pt"></canvas>
+                    </div>
+                    <div class="ft-chart charts">
+                        <canvas id="home-ft"></canvas>
+                    </div>
+                </div>
+
+                <div class="away-charts">
+                    <div class="fg-chart charts" id="home-fg">
+                        <canvas id="away-fg"></canvas>
+                    </div>
+                    <div class="three-pt-chart charts">
+                        <canvas id="away-3pt"></canvas>
+                    </div>
+                    <div class="ft-chart charts">
+                        <canvas id="away-ft"></canvas>
+                    </div>
+                </div> --}}
+            </div>
+        </div>
+
+
+        <div class="ui bottom attached tab segment odds-tab" data-tab="bet-odds">
+        </div>
+
+
+
+        <h3 class="ui dividing header">Comments</h3>
+        <p class="comment-unavailable">Sorry, comments are currently unavailable.</p>
+        {{!-- <div class="comment">
+            <a class="avatar">
+                <img src="">
+            </a>
+            <div class="content">
+                <a class="author">Joe Henderson</a>
+                <div class="metadata">
+                    <span class="date">5 days ago</span>
+                </div>
+                <div class="text">
+                    Dude, this is awesome. Thanks so much
+                </div>
+                <div class="actions">
+                    <a class="reply">Reply</a>
+                </div>
+            </div>
+        </div> --}}
+        <form class="ui reply form">
+            <div class="field">
+                <textarea></textarea>
+            </div>
+            <div class="ui blue labeled submit icon button disabled">
+                <i class="icon edit"></i> Add Reply
+            </div>
+        </form>
+    </div>
+</div>

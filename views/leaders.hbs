@@ -1,0 +1,39 @@
+<div class="ui container leader-container">
+    <table class="ui inverted grey selectable inverted table leader-table">
+        <h1 id="tableHeader">Leaders</h1>
+        <h4 class="details">* Ranked by Amount Won ($) *</h4>
+        <h4 class="details">** Amount Won, Amount Lost, and Profit do not consist of bet amounts for games that
+            have yet to complete **</h4>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Rank</th>
+                <th>Member</th>
+                <th>Total Bets</th>
+                <th>Wins - Losses</th>
+                <th>Total Spent ($)</th>
+                <th>Amount Won ($)</th>
+                <th>Amount Lost ($)</th>
+                <th>Profit ($)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users}}
+            <tr>
+                <td>
+                    <img class="ui tiny rounded image" src="{{imageUrl}}"></img>
+                </td>
+                <td>{{rank}}</td>
+                <td>{{name}}</td>
+                <td>{{totalBets}}</td>
+                <td>{{wins}} - {{losses}}</td>
+                <td>$ {{total}}</td>
+                <td>$ {{winTotal}}</td>
+                <td>$ {{lossTotal}}</td>
+                <td>$ {{profit}}</td>
+
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
